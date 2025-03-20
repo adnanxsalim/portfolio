@@ -59,7 +59,7 @@ export const Header = () => {
         horizontal="center"
       >
         <Flex paddingLeft="12" fillWidth vertical="center" textVariant="body-default-s">
-          {display.location && <Flex hide="s">{person.location}</Flex>}
+          {display.location && <Flex hide="s">{person.locality}</Flex>}
         </Flex>
         <Flex fillWidth horizontal="center">
           <Flex
@@ -126,7 +126,7 @@ export const Header = () => {
                   />
                 </>
               )}
-              {routes["/gallery"] && (
+              {/* {routes["/gallery"] && (
                 <>
                   <ToggleButton
                     className="s-flex-hide"
@@ -142,7 +142,7 @@ export const Header = () => {
                     selected={pathname.startsWith("/gallery")}
                   />
                 </>
-              )}
+              )} */}
             </Flex>
           </Flex>
         </Flex>

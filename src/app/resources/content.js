@@ -1,15 +1,19 @@
-import { InlineCode } from "@/once-ui/components";
+import { InlineCode as IC } from "@/once-ui/components";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Adnan",
+  lastName: "Salim",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
+  mainRole: "Full Stack Engineer", // What I do for a living
+  role: "Cloud and DevOps Engineer", // Work Role
+  position: "Intern -", // Intern, Jr., Sr., etc
+  company: "ipsr solutions ltd",
   avatar: "/images/avatar.jpg",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  location: "Asia/Kolkata", // IANA time zone identifier, e.g., 'Europe/Vienna'
+  locality: "Kozhikode, Kerala, India", // Where am I based in
+  languages: ["English", "Malayalam"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
@@ -17,8 +21,7 @@ const newsletter = {
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
+      I occasionally write about tech, personal development and such.
     </>
   ),
 };
@@ -29,22 +32,22 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/adnanxsalim",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/adnan-a-salim/",
   },
   {
     name: "X",
     icon: "x",
-    link: "",
+    link: "https://x.com/adnanxsalim",
   },
   {
     name: "Email",
     icon: "email",
-    link: "mailto:example@gmail.com",
+    link: "mailto:adnanxsalim@outlook.com",
   },
 ];
 
@@ -52,11 +55,10 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Design engineer and builder</>,
+  headline: <>Hey, there!</>,
   subline: (
     <>
-      I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm {person.firstName}, I work as a {person.role} at <IC>{person.company}</IC>.<br />I craft and optimize intuitive, scalable cloud infrastructure.<br /> On the after hours, I build my own projects.
     </>
   ),
 };
@@ -64,7 +66,7 @@ const home = {
 const about = {
   label: "About",
   title: "About me",
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  description: `Meet ${person.name}, ${person.role} from ${person.locality}`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -81,55 +83,59 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Hey! I'm {person.firstName}. I'm from Kozhikode, Kerala, India. I’m a B. Tech. graduate, majoring in Computer Science.
+        <br />
+        I work as a Cloud and DevOps Intern at ipsr solutions ltd. I’ve completed several projects in this domain, including various web hosting methods, AWS services, and DevOps tools such as Ansible and Docker. 
+        <br /><br />
+        Apart from that, I've been fiddling with things for the last 5+ years.
+        <br /><br />
+        My current skill stack:<br />
+        - DevOps (AWS, Linux System Administration, Ansible, Scripting, etc)<br />
+        - Development (self-taught; Next.js, Blockchain, etc)<br />
+        - Design (self-taught; using Figma)<br />
+        - Marketing (LinkedIn Certified Digital Marketing Specialist)<br />
+        - Trading (Stocks and Crypto)<br />
       </>
     ),
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Work Experience",
+    title: "Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "ipsr solutions ltd.",
+        timeframe: "Oct 2024 - Present",
+        role: `${person.position} ${person.role}`,
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Specialized in Linux server administration techniques and tools through the command line.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Configured and optimized Linux-based web hosting environments in multiple ways including
+            Apache, WordPress, Nginx, virtual hosting setups, and LAMP/LEMP stack deployments.
+          </>,
+          <>
+            Integrated diverse AWS services including EC2 instances, Lambda functions, IAM, CloudWatch
+            monitoring and automation, SES/SNS notifications, EBS and EFS storage, RDS databases, VPC
+            setups, Load Balancer configurations, Auto-Scaling, and Elastic Beanstalk environments.
+          </>,
+          <>
+            Optimized application delivery through Ansible for infrastructure automation, Jenkins for
+            CI/CD processes, and Docker for container deployment and optimization.
+          </>,
+          <>
+            Refined understanding of cPanel, WHM and DNS.
           </>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
+          // {
+          //   src: "/images/projects/project-01/cover-01.jpg",
+          //   alt: "Once UI Project",
+          //   width: 16,
+          //   height: 9,
+          // },
         ],
-      },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
-        ],
-        images: [],
       },
     ],
   },
@@ -138,12 +144,12 @@ const about = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "APJ Abdul Kalam Technological University",
+        description: <>Graduated in B. Tech. Computer Science from College of Engineering, Vadakara.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "ipsr solutions ltd.",
+        description: <>Trained as a Cloud and DevOps Intern.</>,
       },
     ],
   },
@@ -152,35 +158,55 @@ const about = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "Linux Administration",
+        description: <>Manipulating linux systems from the command line interface.</>,
+        images: [],
+      },
+      {
+        title: "AWS",
+        description: <>Launching cloud infrastructure, load balancing, storage, monitoring and automation</>,
+        images: [],
+      },
+      {
+        title: "Web Hosting",
+        description: <>Various types of web hosting on Linux-based servers.</>,
+        images: [],
+      },
+      {
+        title: "DevOps Tools",
+        description: <>Ansible to automate (IaC), Docker for containerization, Jenkins for CI/CD.</>,
+        images: [],
       },
       {
         title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
+        description: <>Building next gen apps with Next.js + Shadcn UI + Supabase.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+          // {
+          //   src: "/images/projects/project-01/cover-04.jpg",
+          //   alt: "Project image",
+          //   width: 16,
+          //   height: 9,
+          // },
+        ],
+      },
+      {
+        title: "Figma",
+        description: <>Creating designs in Figma with speed.</>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          // {
+          //   src: "/images/projects/project-01/cover-02.jpg",
+          //   alt: "Project image",
+          //   width: 16,
+          //   height: 9,
+          // },
+          // {
+          //   src: "/images/projects/project-01/cover-03.jpg",
+          //   alt: "Project image",
+          //   width: 16,
+          //   height: 9,
+          // },
         ],
       },
     ],
@@ -189,7 +215,7 @@ const about = {
 
 const blog = {
   label: "Blog",
-  title: "Writing about design and tech...",
+  title: "Writing about tech, personal development and more.",
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
