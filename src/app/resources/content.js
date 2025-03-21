@@ -10,14 +10,14 @@ const person = {
   role: "Cloud and DevOps Engineer", // Work Role
   position: "Intern -", // Intern, Jr., Sr., etc
   company: "ipsr solutions ltd",
-  avatar: "/images/avatar.jpg",
+  avatar: "/images/avatar.jpeg",
   location: "Asia/Kolkata", // IANA time zone identifier, e.g., 'Europe/Vienna'
   locality: "Kozhikode, Kerala, India", // Where am I based in
   languages: ["English", "Malayalam"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
@@ -47,7 +47,7 @@ const social = [
   {
     name: "Email",
     icon: "email",
-    link: "mailto:adnanxsalim@outlook.com",
+    link: "mailto:hello@adnansal.im",
   },
 ];
 
@@ -58,7 +58,11 @@ const home = {
   headline: <>Hey, there!</>,
   subline: (
     <>
-      I'm {person.firstName}, I work as a {person.role} at <IC>{person.company}</IC>.<br />I craft and optimize intuitive, scalable cloud infrastructure.<br /> On the after hours, I build my own projects.
+      I'm {person.firstName}, I work as a Cloud and DevOps Intern at <IC>{person.company}</IC>.
+      <br />
+      I craft and optimize intuitive, scalable cloud infrastructure.
+      <br />
+      In the after-hours, I build my own projects.
     </>
   ),
 };
@@ -76,14 +80,14 @@ const about = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://cal.com/adnansalim",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Hey! I'm {person.firstName}. I'm from Kozhikode, Kerala, India. I’m a B. Tech. graduate, majoring in Computer Science.
+        Hey! I'm {person.firstName}. I'm from Kozhikode, Kerala, India. I’m a B. Tech. graduate, majored in Computer Science.
         <br />
         I work as a Cloud and DevOps Intern at ipsr solutions ltd. I’ve completed several projects in this domain, including various web hosting methods, AWS services, and DevOps tools such as Ansible and Docker. 
         <br /><br />
@@ -145,11 +149,7 @@ const about = {
     institutions: [
       {
         name: "APJ Abdul Kalam Technological University",
-        description: <>Graduated in B. Tech. Computer Science from College of Engineering, Vadakara.</>,
-      },
-      {
-        name: "ipsr solutions ltd.",
-        description: <>Trained as a Cloud and DevOps Intern.</>,
+        description: <>Graduated in B. Tech. (Computer Science) from College of Engineering, Vadakara.</>,
       },
     ],
   },
@@ -183,12 +183,17 @@ const about = {
         // optional: leave the array empty if you don't want to display images
         images: [
           // {
-          //   src: "/images/projects/project-01/cover-04.jpg",
-          //   alt: "Project image",
-          //   width: 16,
-          //   height: 9,
-          // },
+            //   src: "/images/projects/project-01/cover-04.jpg",
+            //   alt: "Project image",
+            //   width: 16,
+            //   height: 9,
+            // },
         ],
+      },
+      {
+        title: "Solidity",
+        description: <>Building efficient smart contract code for blockchains.</>,
+        images: [],
       },
       {
         title: "Figma",
