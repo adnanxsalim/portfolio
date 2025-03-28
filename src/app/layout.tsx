@@ -1,3 +1,5 @@
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 import "@/once-ui/styles/index.scss";
 import "@/once-ui/tokens/index.scss";
 
@@ -157,6 +159,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
           <Footer />
         </Column>
       </ToastProvider>
+      <SpeedInsights />
     </Flex>
   );
 }
