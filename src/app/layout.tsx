@@ -143,6 +143,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
           />
           <Flex fillWidth minHeight="16"></Flex>
           <Header />
+          <SpeedInsights />
           <Flex
             position="relative"
             zIndex={0}
@@ -159,7 +160,6 @@ export default async function RootLayout({ children }: RootLayoutProps) {
           <Footer />
         </Column>
       </ToastProvider>
-      <SpeedInsights />
     </Flex>
   );
 }
