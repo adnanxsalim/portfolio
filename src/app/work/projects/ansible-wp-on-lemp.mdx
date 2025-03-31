@@ -1,0 +1,48 @@
+---
+title: "WordPress on LEMP stack using Ansible"
+publishedAt: "2025-03-19"
+summary: "Created an Ansible playbook from scratch to install and configure WordPress on LEMP stack."
+images:
+  - "/images/projects/ansible-wp-on-lemp/cover.jpg"
+team:
+  - name: "Adnan Salim"
+    role: "Software Engineer"
+    avatar: "/images/avatar.jpeg"
+    linkedIn: "https://linkedin.com/in/adnan-a-salim/"
+link: "https://github.com/adnanxsalim/project-ansible-lemp-wp"
+---
+
+## Overview
+
+In this project, I created an Ansible playbook from scratch to install and configure WordPress on LEMP(Linux, Nginx, MySQL & PHP) stack.
+
+## Key Features
+
+- **CMS and blog**: Executed with the help of WordPress.
+- **Secure MySQL database**: With the help of phpMyAdmin and mysql_secure_installation.
+- **Robust & secure web server**: With the help of the Nginx web server and Certbot for SSL certficate allocation.
+- **User directory web hosting**: Set up SELinux and Firewall to allow web hosting under user's home directory.
+- **Domain name**: Mapped a domain name to the deployment by adding an "A record" at the DNS settings provided by the domain registrar.
+
+## Technologies Used
+
+- **Ansible**: For automating the process (as an IaC).
+- **AWS**: For creating an EC2 instance with an Elastic IP attached to it.
+- **WordPress**: As the Content Management System(CMS) and blog platform.
+- **MySQL**: For the database.
+- **Nginx**: As the web server.
+- **SFTP**: For others(say, a developer) to access/edit the contents via a secure SFTP port.
+- **phpMyAdmin**: As additional security and as a GUI for the MySQL database.
+- **Certbot**: For generating the SSL certificate to bypass HTTP traffic that is not secure, to HTTPS.
+
+## Challenges and Learnings
+
+The biggest challenge with this project was the debugging process, which took forever. But one-by-one, the errors were rectified to ensure the smooth running of the Ansible playbook.
+
+## Outcome
+
+A secure web hosting infrastructure, implementing a full LEMP stack with enhanced security features and WordPress integration. Successfully configured six critical system components across web server, database, and content management layers using Ansible, as a control node.
+
+{/* ---
+
+This project demonstrates your ability to leverage automation and streamline workflows, which is highly relevant for design engineering portfolios focused on efficiency and innovation. */}
