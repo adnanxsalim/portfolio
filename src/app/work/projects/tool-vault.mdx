@@ -14,11 +14,41 @@ link: "https://github.com/adnanxsalim/tool-vault"
 
 ## Overview
 
-In this project, I implemented a CLI tool that allows users to easily back up their codebase, which can be used later for rollback or as a boilerplate for new projects.
+**Vault** is a lightweight, local-first command line tool for developers who frequently work with similar project setups. Instead of rewriting the same boilerplate, reinstalling the same dependencies, or copying over reused components, Vault allows you to save your codebase structure once and load it into any new project directory instantly.
+
+Vault is intentionally simple. Just clean copies of your codebase you can trust; stored locally and instantly restorable.
+
+Why spend time rebuilding what you’ve already built?
+
+## Setup
+
+### Prerequisites
+
+- Python installed on your machine.
+- A Linux-based operating system (tested on MacOS).
+
+### Installation Steps
+
+1. Clone the repository:
+  ```bash
+      git clone https://github.com/adnanxsalim/tool-vault.git
+  ```
+2. Navigate to the project directory:
+  ```bash
+      cd tool-vault
+  ```
+3. Update the `vault` script to make it executable:
+  ```bash
+      chmod +x vault.py
+  ```
+4. Move the `vault` script to a directory in your PATH, such as `/usr/local/bin`:
+  ```bash
+      sudo mv vault.py /usr/local/bin/vault
+  ```
 
 ## Key Features
 
-- #### vault save
+#### vault save
 
 Saves the codebase from the specified source path, with the given name.
 
@@ -27,60 +57,44 @@ The codebases are stored in a directory named _Vault Storage_ under the user's h
 The directory is created if it does not exist already.
 
 Usage:
-```bash
-vault save <source_path> <name>
-```
+`vault save <source_path> <name>`
 
 Example:
-```bash
-vault save /path/to/codebase my_project
-```
+`vault save /path/to/codebase my_project`
 
-- #### vault load
+#### vault load
 
 Loads and pastes the specified codebase from the _Vault Storage_ to the specified destination.
 
 Usage:
-```bash
-vault load <destination_path> <name>
-```
+`vault load <destination_path> <name>`
 
 Example:
-```bash
-vault load /path/to/paste my_project
-```
+`vault load /path/to/paste my_project`
 
-- #### vault list
+#### vault list
 
 Lists all the codebases saved in the _Vault Storage_.
 
 Usage:
-```bash
-vault list
-```
+`vault list`
 
-- #### vault delete
+#### vault delete
 
 Deletes the specified codebase from the _Vault Storage_.
 
 Usage:
-```bash
-vault delete <name>
-```
+`vault delete <name>`
 
 Example:
-```bash
-vault delete my_project
-```
+`vault delete my_project`
 
-- #### vault help
+#### vault help
 
 Displays help information for the CLI tool.
 
 Usage:
-```bash
-vault --help
-```
+`vault --help`
 
 ## Technologies Used
 
@@ -94,8 +108,15 @@ The biggest challenge with this project was keeping it simple. I added more and 
 
 ## Outcome
 
-A simple CLI tool to save, load, list, and delete codebases from the vault storage.
+With Vault in my toolbox, I:
+
+- Reduced project setup time by at least 10 minutes per project
+- Eliminated repetitive configuration and dependency management
+- Created a simple and repeatable workflow for bootstrapping projects
+- Had peace of mind knowing my base setups are always one command away
 
 ---
 
-It is a great tool for developers who want to locally save their codebases for later.
+Vault isn't trying to be a full-fledged version control system or a cloud backup service.
+
+It’s a minimal safety net, just enough for developers who want speed and sanity.
