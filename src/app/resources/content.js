@@ -7,9 +7,9 @@ const person = {
     return `${this.firstName} ${this.lastName}`;
   },
   mainRole: "Full Stack Engineer", // What I do for a living
-  role: "Cloud and DevOps Engineer", // Work Role
-  position: "Intern -", // Intern, Jr., Sr., etc
-  company: "ipsr solutions ltd",
+  role: "System Administrator", // Work Role
+  position: "Intern", // Intern, Jr., Sr., etc
+  company: "Hashroot",
   avatar: "/images/avatar.jpeg",
   location: "Asia/Kolkata", // IANA time zone identifier, e.g., 'Europe/Vienna'
   locality: "Kozhikode, Kerala, India", // Where am I based in
@@ -58,9 +58,7 @@ const home = {
   headline: <>Hey, there!</>,
   subline: (
     <>
-      I'm {person.firstName}, I work as a Cloud and DevOps Intern at <IC>{person.company}</IC>.
-      <br />
-      I craft and optimize intuitive, scalable cloud infrastructure.
+      I'm {person.firstName}, I work as a {person.role} {person.position} at <IC>{person.company}</IC>.
       <br />
       In the after-hours, I build my own projects.
     </>
@@ -89,7 +87,7 @@ const about = {
       <>
         Hey! I'm {person.firstName}. I'm from Kozhikode, Kerala, India. I’m a B. Tech. graduate, majored in Computer Science.
         <br />
-        I work as a Cloud and DevOps Intern at ipsr solutions ltd. I’ve completed several projects in this domain, including various web hosting methods, AWS services, and DevOps tools such as Ansible and Docker. 
+        I work as a {person.role} {person.position} at {person.company}.
         <br /><br />
         Apart from that, I've been fiddling with things for the last 5+ years.
         <br /><br />
@@ -107,28 +105,52 @@ const about = {
     title: "Experience",
     experiences: [
       {
-        company: "ipsr solutions ltd.",
-        timeframe: "Oct 2024 - Present",
-        role: `${person.position} ${person.role}`,
+        company: "Hashroot",
+        timeframe: "May 2025 - Present",
+        role: `${person.role} ${person.position}`,
         achievements: [
           <>
-            Specialized in Linux server administration techniques and tools through the command line.
+            Configured and maintained 12+ web servers and hosting environments
+            including LAMP stack, Apache, Nginx, WordPress, Plesk, cPanel, and WHM.
           </>,
           <>
-            Configured and optimized Linux-based web hosting environments in multiple ways including
-            Apache, WordPress, Nginx, virtual hosting setups, and LAMP/LEMP stack deployments.
+            Administered 4+ Windows Server tasks such as static IP set up, role-based IIS
+            installation, RDP access, policies, shared folders, and security rules.
           </>,
           <>
-            Integrated diverse AWS services including EC2 instances, Lambda functions, IAM, CloudWatch
-            monitoring and automation, SES/SNS notifications, EBS and EFS storage, RDS databases, VPC
-            setups, Load Balancer configurations, Auto-Scaling, and Elastic Beanstalk environments.
+            Monitored and analyzed 1,000+ log entries to detect threats, troubleshoot
+            issues, and ensure optimal server performance and uptime.
+          </>,
+        ],
+        images: [
+          // optional: leave the array empty if you don't want to display images
+          // {
+          //   src: "/images/projects/project-01/cover-01.jpg",
+          //   alt: "Once UI Project",
+          //   width: 16,
+          //   height: 9,
+          // },
+        ],
+      },
+      {
+        company: "ipsr solutions ltd.",
+        timeframe: "Oct 2024 - May 2025",
+        role: `Linux, Cloud and DevOps Trainee`,
+        achievements: [
+          <>
+            Gained hands-on expertise in Linux server administration with 100+ hours of
+            CLI-based configuration and troubleshooting.
           </>,
           <>
-            Optimized application delivery through Ansible for infrastructure automation, Jenkins for
-            CI/CD processes, and Docker for container deployment and optimization.
+            Configured and optimized 3+ types of Web Servers, inluding Apache & Nginx.
           </>,
           <>
-            Refined understanding of cPanel, WHM and DNS.
+            Integrated 10+ AWS services (e.g., EC2, S3, IAM, CloudWatch, Lambda, RDS) to
+            build scalable and secure cloud architectures.
+          </>,
+          <>
+            Developed and maintained several Ansible playbooks to automate
+            infrastructure provisioning, reducing manual configuration time by 40%.
           </>,
         ],
         images: [
